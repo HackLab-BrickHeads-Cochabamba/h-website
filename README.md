@@ -1,47 +1,76 @@
-# Astro Starter Kit: Minimal
+# Hacklab Brickheads Website
 
-```sh
-npm create astro@latest -- --template minimal
+Lorem Ipsum (añadir descripcion)
+
+## Instalación
+
+1. Clonar este repositorio en tu máquina local.
+2. Asegúrate de tener instalado:
+    * Node.js (versión 20 o superior)
+    * pnpm
+3. Abre una terminal en la carpeta del proyecto y ejecuta el siguiente comando para instalar las dependencias:
+
+```bash
+pnpm install
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Uso
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Desarrollo
 
-## 🚀 Project Structure
+Para ejecutar el proyecto en modo de desarrollo, utiliza el siguiente comando:
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+pnpm run dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Construcción
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Para compilar el proyecto para producción, utiliza:
 
-Any static assets, like images, can be placed in the `public/` directory.
+```bash
+pnpm run build
+```
 
-## 🧞 Commands
+### Vista previa
 
-All commands are run from the root of the project, from a terminal:
+Puedes obtener una vista previa del proyecto construido utilizando:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+```bash
+pnpm run preview
+```
 
-## 👀 Want to learn more?
+### Linting
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Para verificar y corregir el estilo del código, ejecuta:
+
+```bash
+pnpm run lint
+```
+
+Para corregir automáticamente los problemas de linting, utiliza:
+
+```bash
+pnpm run lint:fix
+```
+
+### Publicación
+
+Para realizar una nueva versión del proyecto, utiliza:
+
+```bash
+pnpm run release
+```
+
+## Contribución
+
+Para contribuir sigue los siguientes pasos:
+
+1. Crea una rama para tu contribución: `git checkout -b mi_contribucion`
+2. Realiza tus cambios y haz commit: `git commit -am "Cambio realizado"`
+3. Sube tus cambios: `git push origin mi_contribucion`
+4. Abre un Pull Request con una descripción detallada de tus cambios.
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Para más detalles, consulta el archivo [LICENSE](LICENSE).
