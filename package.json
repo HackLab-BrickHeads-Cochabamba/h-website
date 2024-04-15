@@ -1,17 +1,48 @@
 {
-  "name": "website",
+  "name": "hacklab-website",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@8.15.5",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "simple-git-hooks",
+    "dev": "astro dev --host",
+    "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "release": "bumpp"
   },
   "dependencies": {
+    "@astrojs/mdx": "^2.3.0",
+    "@astrojs/rss": "^4.0.5",
+    "@astrojs/sitemap": "^3.1.2",
+    "@astrojs/vue": "^4.1.0",
+    "@unocss/reset": "^0.59.2",
     "astro": "^4.6.1",
-    "@astrojs/check": "^0.5.10",
-    "typescript": "^5.4.5"
+    "marked": "^12.0.1",
+    "unocss": "^0.59.2",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.14.0",
+    "@iconify/json": "^2.2.201",
+    "@vueuse/core": "^10.9.0",
+    "bumpp": "^9.4.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-astro": "^0.31.4",
+    "eslint-plugin-format": "^0.1.0",
+    "lint-staged": "^15.2.2",
+    "prettier-plugin-astro": "^0.13.0",
+    "simple-git-hooks": "^2.11.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "pnpm lint:fix"
   }
 }
